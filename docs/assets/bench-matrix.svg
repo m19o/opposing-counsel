@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="290" viewBox="0 0 700 290" font-family="ui-sans-serif,system-ui,sans-serif"><rect width="700" height="290" fill="#0d1117" rx="8"/><text x="24" y="34" font-size="14" fill="#e6edf3" text-anchor="start" font-weight="bold">Seeds x seats: who caught which bug</text>
+<text x="481" y="62" font-size="10" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace">longcat</text>
+<text x="536" y="62" font-size="10" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace">glm</text>
+<text x="591" y="62" font-size="10" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace">deepseek</text>
+<text x="646" y="62" font-size="10" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace">mimo</text>
+<text x="24" y="91" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S1</text>
+<text x="52" y="91" font-size="11" fill="#e6edf3" text-anchor="start">grant_available consumes instead of peeking</text>
+<rect x="470" y="78" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="525" y="78" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="580" y="78" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="635" y="78" width="16" height="16" rx="3" fill="#3fb950"/>
+<text x="24" y="119" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S2</text>
+<text x="52" y="119" font-size="11" fill="#e6edf3" text-anchor="start">no lineage-stable grant_id (budget fan-out)</text>
+<rect x="470" y="106" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="525" y="106" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="580" y="106" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="635" y="106" width="16" height="16" rx="3" fill="#3fb950"/>
+<text x="24" y="147" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S3</text>
+<text x="52" y="147" font-size="11" fill="#e6edf3" text-anchor="start">holder proof-of-possession skipped</text>
+<rect x="470" y="134" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="525" y="134" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="580" y="134" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="635" y="134" width="16" height="16" rx="3" fill="#3fb950"/>
+<text x="24" y="175" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S4</text>
+<text x="52" y="175" font-size="11" fill="#e6edf3" text-anchor="start">unknown blast class fails open</text>
+<rect x="470" y="162" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="525" y="162" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="580" y="162" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="635" y="162" width="16" height="16" rx="3" fill="#3fb950"/>
+<text x="24" y="203" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S5</text>
+<text x="52" y="203" font-size="11" fill="#e6edf3" text-anchor="start">window ignores not-before bound</text>
+<rect x="470" y="190" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="525" y="190" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="580" y="190" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="635" y="190" width="16" height="16" rx="3" fill="#3fb950"/>
+<text x="24" y="231" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S6</text>
+<text x="52" y="231" font-size="11" fill="#e6edf3" text-anchor="start">pre_authorized folded into fingerprint</text>
+<rect x="470" y="218" width="16" height="16" rx="3" fill="none" stroke="#30363d"/>
+<rect x="525" y="218" width="16" height="16" rx="3" fill="none" stroke="#f85149"/>
+<line x1="525" y1="232" x2="541" y2="218" stroke="#f85149" stroke-width="2"/>
+<rect x="580" y="218" width="16" height="16" rx="3" fill="#3fb950"/>
+<rect x="635" y="218" width="16" height="16" rx="3" fill="none" stroke="#30363d"/>
+<text x="24" y="262" font-size="10" fill="#8b949e" text-anchor="start">filled: caught (exact mechanism named)   hollow: missed   struck: right line, wrong defect, removed in adjudication</text></svg>
