@@ -1,43 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="290" viewBox="0 0 700 290" font-family="ui-sans-serif,system-ui,sans-serif"><rect width="700" height="290" fill="#0d1117" rx="8"/><text x="24" y="34" font-size="14" fill="#e6edf3" text-anchor="start" font-weight="bold">Seeds x seats: who caught which bug</text>
-<text x="481" y="62" font-size="10" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace">longcat</text>
-<text x="536" y="62" font-size="10" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace">glm</text>
-<text x="591" y="62" font-size="10" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace">deepseek</text>
-<text x="646" y="62" font-size="10" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace">mimo</text>
-<text x="24" y="91" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S1</text>
-<text x="52" y="91" font-size="11" fill="#e6edf3" text-anchor="start">grant_available consumes instead of peeking</text>
-<rect x="470" y="78" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="525" y="78" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="580" y="78" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="635" y="78" width="16" height="16" rx="3" fill="#3fb950"/>
-<text x="24" y="119" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S2</text>
-<text x="52" y="119" font-size="11" fill="#e6edf3" text-anchor="start">no lineage-stable grant_id (budget fan-out)</text>
-<rect x="470" y="106" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="525" y="106" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="580" y="106" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="635" y="106" width="16" height="16" rx="3" fill="#3fb950"/>
-<text x="24" y="147" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S3</text>
-<text x="52" y="147" font-size="11" fill="#e6edf3" text-anchor="start">holder proof-of-possession skipped</text>
-<rect x="470" y="134" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="525" y="134" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="580" y="134" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="635" y="134" width="16" height="16" rx="3" fill="#3fb950"/>
-<text x="24" y="175" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S4</text>
-<text x="52" y="175" font-size="11" fill="#e6edf3" text-anchor="start">unknown blast class fails open</text>
-<rect x="470" y="162" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="525" y="162" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="580" y="162" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="635" y="162" width="16" height="16" rx="3" fill="#3fb950"/>
-<text x="24" y="203" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S5</text>
-<text x="52" y="203" font-size="11" fill="#e6edf3" text-anchor="start">window ignores not-before bound</text>
-<rect x="470" y="190" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="525" y="190" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="580" y="190" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="635" y="190" width="16" height="16" rx="3" fill="#3fb950"/>
-<text x="24" y="231" font-size="12" fill="#d29922" text-anchor="start" font-family="ui-monospace,monospace" font-weight="bold">S6</text>
-<text x="52" y="231" font-size="11" fill="#e6edf3" text-anchor="start">pre_authorized folded into fingerprint</text>
-<rect x="470" y="218" width="16" height="16" rx="3" fill="none" stroke="#30363d"/>
-<rect x="525" y="218" width="16" height="16" rx="3" fill="none" stroke="#f85149"/>
-<line x1="525" y1="232" x2="541" y2="218" stroke="#f85149" stroke-width="2"/>
-<rect x="580" y="218" width="16" height="16" rx="3" fill="#3fb950"/>
-<rect x="635" y="218" width="16" height="16" rx="3" fill="none" stroke="#30363d"/>
-<text x="24" y="262" font-size="10" fill="#8b949e" text-anchor="start">filled: caught (exact mechanism named)   hollow: missed   struck: right line, wrong defect, removed in adjudication</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="580" viewBox="0 0 700 580" font-family="ui-sans-serif,system-ui,sans-serif">
+  <rect x="0" y="0" width="700" height="580" rx="8" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="32" y="52" font-size="26" font-weight="700" fill="#e6edf3">Seeds x seats: who caught which bug</text>
+  <text x="32" y="80" font-size="14" fill="#8b949e">6 real bugs re-seeded into an authorization library · 4 models reviewed the code blind</text>
+
+  <!-- Column headers -->
+  <g font-size="14" font-weight="600" fill="#e6edf3" text-anchor="middle">
+    <text x="428" y="130">longcat*</text>
+    <text x="502" y="130">glm</text>
+    <text x="576" y="130">deepseek*</text>
+    <text x="650" y="130">mimo*</text>
+  </g>
+  <text x="32" y="130" font-size="12" font-weight="600" fill="#8b949e" letter-spacing="1">SEEDED BUG</text>
+  <line x1="32" y1="144" x2="668" y2="144" stroke="#30363d" stroke-width="1"/>
+
+  <!-- S6 row highlight -->
+  <rect x="24" y="360" width="652" height="40" rx="6" fill="#161b22"/>
+
+  <!-- Row labels -->
+  <g font-size="13" fill="#e6edf3">
+    <text x="32" y="171" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-weight="700" fill="#d29922">S1</text>
+    <text x="64" y="171">grant_available consumes instead of peeking</text>
+
+    <text x="32" y="215" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-weight="700" fill="#d29922">S2</text>
+    <text x="64" y="215">no lineage-stable grant_id (budget fan-out)</text>
+
+    <text x="32" y="259" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-weight="700" fill="#d29922">S3</text>
+    <text x="64" y="259">holder proof-of-possession skipped</text>
+
+    <text x="32" y="303" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-weight="700" fill="#d29922">S4</text>
+    <text x="64" y="303">unknown blast class fails open</text>
+
+    <text x="32" y="347" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-weight="700" fill="#d29922">S5</text>
+    <text x="64" y="347">window ignores not-before bound</text>
+
+    <text x="32" y="385" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-weight="700" fill="#d29922">S6</text>
+    <text x="64" y="385">pre_authorized folded into fingerprint</text>
+  </g>
+
+  <!-- Cells: S1-S5 all caught -->
+  <g fill="#3fb950">
+    <rect x="415" y="153" width="26" height="26" rx="4"/>
+    <rect x="489" y="153" width="26" height="26" rx="4"/>
+    <rect x="563" y="153" width="26" height="26" rx="4"/>
+    <rect x="637" y="153" width="26" height="26" rx="4"/>
+
+    <rect x="415" y="197" width="26" height="26" rx="4"/>
+    <rect x="489" y="197" width="26" height="26" rx="4"/>
+    <rect x="563" y="197" width="26" height="26" rx="4"/>
+    <rect x="637" y="197" width="26" height="26" rx="4"/>
+
+    <rect x="415" y="241" width="26" height="26" rx="4"/>
+    <rect x="489" y="241" width="26" height="26" rx="4"/>
+    <rect x="563" y="241" width="26" height="26" rx="4"/>
+    <rect x="637" y="241" width="26" height="26" rx="4"/>
+
+    <rect x="415" y="285" width="26" height="26" rx="4"/>
+    <rect x="489" y="285" width="26" height="26" rx="4"/>
+    <rect x="563" y="285" width="26" height="26" rx="4"/>
+    <rect x="637" y="285" width="26" height="26" rx="4"/>
+
+    <rect x="415" y="329" width="26" height="26" rx="4"/>
+    <rect x="489" y="329" width="26" height="26" rx="4"/>
+    <rect x="563" y="329" width="26" height="26" rx="4"/>
+    <rect x="637" y="329" width="26" height="26" rx="4"/>
+  </g>
+
+  <!-- S6 cells -->
+  <rect x="415" y="367" width="26" height="26" rx="4" fill="#3fb950"/>
+  <rect x="490" y="368" width="24" height="24" rx="4" fill="none" stroke="#f85149" stroke-width="2"/>
+  <line x1="494" y1="388" x2="510" y2="372" stroke="#f85149" stroke-width="2" stroke-linecap="round"/>
+  <rect x="564" y="368" width="24" height="24" rx="4" fill="none" stroke="#6e7681" stroke-width="2"/>
+  <rect x="638" y="368" width="24" height="24" rx="4" fill="none" stroke="#6e7681" stroke-width="2"/>
+
+  <!-- Totals -->
+  <line x1="32" y1="414" x2="668" y2="414" stroke="#30363d" stroke-width="1"/>
+  <text x="32" y="443" font-size="12" font-weight="600" fill="#8b949e" letter-spacing="1">TOTAL CAUGHT</text>
+  <g font-size="18" font-weight="700" text-anchor="middle" fill="#e6edf3">
+    <text x="428" y="444" fill="#3fb950">6/6*</text>
+    <text x="502" y="444">5/6</text>
+    <text x="576" y="444">5/6*</text>
+    <text x="650" y="444">5/6*</text>
+  </g>
+
+  <!-- Legend -->
+  <line x1="32" y1="470" x2="668" y2="470" stroke="#30363d" stroke-width="1"/>
+  <g font-size="13" fill="#e6edf3">
+    <rect x="32" y="490" width="16" height="16" rx="3" fill="#3fb950"/>
+    <text x="56" y="503">caught (matched seed)</text>
+
+    <rect x="229" y="491" width="14" height="14" rx="3" fill="none" stroke="#6e7681" stroke-width="2"/>
+    <text x="252" y="503">missed</text>
+
+    <rect x="327" y="491" width="14" height="14" rx="3" fill="none" stroke="#f85149" stroke-width="2"/>
+    <line x1="330" y1="502" x2="338" y2="494" stroke="#f85149" stroke-width="2" stroke-linecap="round"/>
+    <text x="350" y="503">flagged, credit removed in adjudication</text>
+  </g>
+
+  <!-- Footnote -->
+  <g font-size="12" fill="#8b949e">
+    <text x="32" y="538">* seat left the fixture and diffed the pristine source: practice-grade.</text>
+    <text x="32" y="556">Single scored run, 6 seeds; two more seats died before reviewing.</text>
+  </g>
+</svg>
